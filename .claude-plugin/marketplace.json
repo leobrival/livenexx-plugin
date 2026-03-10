@@ -1,0 +1,11 @@
+{
+  "$schema": "../schemas/marketplace.schema.json",
+  "name": "livenexx-plugin",
+  "version": "1.0.0",
+  "description": "Livenexx plugins for Claude Code - development tooling and workflows",
+  "owner": {
+    "name": "Léo Brival",
+    "email": "leo.brival@gmail.com"
+  },
+  "plugins": []
+}
