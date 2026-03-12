@@ -1,0 +1,7 @@
+{
+  "Deployment & Hosting": ["vercel-cli"],
+  "Frontend & Frameworks": ["nextjs-cli"],
+  "DevOps & Infrastructure": ["docker-cli", "github-cli"],
+  "Testing & Quality": ["playwright-cli", "lighthouse-cli"],
+  "Claude Code Hooks & Utilities": ["git-workflow", "linter-setup"]
+}

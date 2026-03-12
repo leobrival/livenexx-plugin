@@ -1,21 +1,64 @@
-# Livenexx - Plugin Factory
+# Livenexx Plugin
 
-Official Livenexx plugins for Claude Code - development tooling and workflows.
+Livenexx plugins for Claude Code - development tooling and workflows
 
-## Description
+## Available Plugins
 
-Plugins internes pour le projet Livenexx, couvrant les workflows de développement, les automatisations et les outils spécifiques au projet.
+### Dev
+
+Development CLI skills, GitHub workflows, and Claude Code hooks - Docker, Vercel, Next.js, GitHub CLI, Playwright, Lighthouse, Git workflows, Biome linter setup, and modular status line
+
+**Skills (8)**:
+
+| Category | Skills |
+|----------|--------|
+| Deployment & Hosting | vercel-cli |
+| Frontend & Frameworks | nextjs-cli |
+| DevOps & Infrastructure | docker-cli, github-cli |
+| Testing & Quality | playwright-cli, lighthouse-cli |
+| Claude Code Hooks & Utilities | git-workflow, linter-setup |
+
+**Commands (8)**: `/clean-gone`, `/commit-push-pr`, `/commit`, `/debug`, `/fix-pr-comments`, `/issue-worktree`, `/merge-to-main`, `/run-task`
+
+**Scripts**: git-workflow
+
+## File Structure
+
+```text
+livenexx-plugin/
+├── .claude-plugin/
+│   └── marketplace.json
+├── plugins/
+│   └── dev/
+        ├── README.md
+        ├── skills/           # 8 skills
+        ├── commands/          # 8 commands
+        └── scripts/
+├── schemas/
+│   └── marketplace.schema.json
+└── README.md
+```
 
 ## Installation
 
-1. Clonez ce dépôt dans votre répertoire de plugins Claude
-2. Configurez les plugins selon vos besoins
-3. Commencez à développer !
+### Add the marketplace
 
-## Plugins disponibles
+```bash
+/plugin marketplace add stanbrunet/livenexx-plugin
+```
 
-À venir...
+### Install plugins
 
-## Licence
+```bash
+/plugin install dev@livenexx-plugin
+```
+
+### Verify
+
+```bash
+/plugin list
+```
+
+## License
 
 MIT

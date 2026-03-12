@@ -7,5 +7,17 @@
     "name": "Léo Brival",
     "email": "leo.brival@gmail.com"
   },
-  "plugins": []
+  "plugins": [
+    {
+      "name": "dev",
+      "description": "Development CLI skills, GitHub workflows, and Claude Code hooks - Docker, Vercel, Next.js, GitHub CLI, Playwright, Lighthouse, Git workflows, Biome linter setup, and modular status line",
+      "version": "1.0.0",
+      "author": {
+        "name": "Leo Brival",
+        "email": "leo.brival@gmail.com"
+      },
+      "source": "./plugins/dev",
+      "category": "development"
+    }
+  ]
 }
