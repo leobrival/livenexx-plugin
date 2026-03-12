@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Pre-commit hook — runs marketplace validation scripts
-# These scripts check README conformity, skill hash integrity, and marketplace.json
+# These scripts check README conformity, skill hash integrity, marketplace.json, and skill standards
 
 MARKETPLACE_ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
 
@@ -24,6 +24,13 @@ python3 "$MARKETPLACE_ROOT/.claude/scripts/check-marketplace-json.py" --check --
   echo ""
   echo "Marketplace JSON conformity check failed."
   echo "Fix: python3 $MARKETPLACE_ROOT/.claude/scripts/check-marketplace-json.py --fix"
+  exit 1
+}
+
+python3 "$MARKETPLACE_ROOT/.claude/scripts/check-skill-standards.py" --check --quiet || {
+  echo ""
+  echo "Skill design standards check failed."
+  echo "Fix: python3 $MARKETPLACE_ROOT/.claude/scripts/check-skill-standards.py --check"
   exit 1
 }
 
