@@ -18,6 +18,9 @@ gh auth login
 # Check authentication status
 gh auth status
 
+# Switch active account (multi-account)
+gh auth switch --user <username>
+
 # View current repository
 gh repo view
 
@@ -121,10 +124,29 @@ gh release view v1.0.0
 gh release upload v1.0.0 ./build/app.tar.gz
 ```
 
+### Workflow 6: Multi-Account Management
+
+```bash
+# List all authenticated accounts
+gh auth status
+
+# Switch active account
+gh auth switch --user leobrival
+
+# Add a new account
+gh auth login
+
+# Remove an account
+gh auth logout --user old-username
+```
+
+Use the `/gh-switch <username>` command for quick account switching.
+
 ## Decision Tree
 
 **When to use which command:**
 
+- **To switch GitHub accounts**: Use `/gh-switch <username>` or `gh auth switch`
 - **To manage repositories**: Use `gh repo` (create, clone, fork, view)
 - **To work with issues**: Use `gh issue` (create, list, view, close)
 - **To work with PRs**: Use `gh pr` (create, list, view, checkout, merge)

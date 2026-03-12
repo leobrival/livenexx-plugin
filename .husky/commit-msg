@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Commit message validation with commitlint (Conventional Commits)
+bunx --no -- commitlint --edit $1

@@ -1,0 +1,13 @@
+{
+  "name": "livenexx-plugin",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "husky": "^9",
+    "@commitlint/cli": "^19",
+    "@commitlint/config-conventional": "^19"
+  }
+}
