@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -euo pipefail
 # WorktreeRemove hook for Claude Code
 # Reads JSON from stdin, cleans up worktree and associated resources.
 # All logs go to stderr. Exit code is non-blocking (Claude Code ignores failures).

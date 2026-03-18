@@ -1,9 +1,8 @@
-#!/bin/bash
+#!/usr/bin/env bash
+set -euo pipefail
 
 # Installation script for Worktree Manager
 # Checks dependencies and sets up the environment
-
-set -e
 
 echo "🌳 Worktree Manager - Installation"
 echo "==================================="

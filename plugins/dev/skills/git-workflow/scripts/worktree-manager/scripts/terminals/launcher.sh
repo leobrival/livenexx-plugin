@@ -1,9 +1,8 @@
-#!/bin/bash
+#!/usr/bin/env bash
+set -euo pipefail
 
 # Universal Terminal Launcher
 # Handles all terminal apps through a single modular script
-
-set -e
 
 TERMINAL_APP="${1}"
 COMMAND="${2}"
