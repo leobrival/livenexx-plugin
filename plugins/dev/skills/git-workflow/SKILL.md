@@ -1,6 +1,7 @@
 ---
 name: git-workflow
 description: Complete Git development workflow toolkit. Covers commit, push, PR creation, merge to main, branch cleanup, debug, PR comment resolution, issue-based worktree creation, task execution, and worktree hooks configuration. Use when users need any Git-based development workflow or worktree isolation setup.
+disable-model-invocation: true
 allowed-tools: Bash(git *), Bash(gh *), Bash(bun *), Bash(npm *), Bash(pnpm *), Bash(yarn *), Bash(chmod *), Bash(cat *), Bash(ls *), Bash(mkdir *), Read, Write, Edit, Grep, Glob
 handoffs:
   - command: /commit

@@ -1,6 +1,7 @@
 ---
 name: nextjs-cli
 description: Next.js CLI expert for React development. Use when users need to create, develop, build, or deploy Next.js applications.
+user-invocable: false
 allowed-tools: Bash(next:*), Bash(npx next:*), Bash(bunx next:*)
 handoffs: []
 ---

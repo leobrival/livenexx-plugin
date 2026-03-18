@@ -1,6 +1,7 @@
 ---
 name: linter-setup
 description: Linting and formatting setup expert using Biome and markdownlint-cli2. Use when users need to set up linters, configure Biome for TypeScript/JavaScript/CSS/JSON, configure markdownlint for Markdown files, migrate from ESLint/Prettier, or add code quality tooling to a project.
+user-invocable: false
 allowed-tools: Bash(biome:*), Bash(bunx biome:*), Bash(npx biome:*), Bash(markdownlint-cli2:*), Bash(npx markdownlint-cli2:*)
 handoffs:
   - command: /commit

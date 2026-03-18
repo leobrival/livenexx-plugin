@@ -1,6 +1,7 @@
 ---
 name: playwright-cli
 description: Playwright CLI expert for E2E testing and browser automation. Use when users need to record tests, debug issues, generate reports, or test across multiple browsers and devices.
+user-invocable: false
 allowed-tools: Bash(npx playwright:*), Bash(bunx playwright:*)
 handoffs: []
 ---

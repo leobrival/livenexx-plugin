@@ -1,6 +1,7 @@
 ---
 name: github-cli
 description: GitHub CLI (gh) expert for repository management. Use when users need to manage repos, issues, PRs, Actions, secrets, or interact with GitHub.
+user-invocable: false
 allowed-tools: Bash(gh:*)
 handoffs: []
 ---
