@@ -41,15 +41,17 @@ livenexx-plugin/
 
 ## Installation
 
-### Add the marketplace
+### Via `origin` (leobrival/livenexx-plugin)
 
 ```bash
 /plugin marketplace add leobrival/livenexx-plugin
+/plugin install dev@livenexx-plugin
 ```
 
-### Install plugins
+### Via `onylivenexx` (onylivenexx/dev)
 
 ```bash
+/plugin marketplace add onylivenexx/dev
 /plugin install dev@livenexx-plugin
 ```
 
