@@ -37,7 +37,7 @@ Development CLI skills, GitHub workflows, and Claude Code hooks - Docker, Vercel
 | **git-workflow** | Complete Git development workflow toolkit. | `WorktreeCreate`, `WorktreeRemove` |
 | **linter-setup** | Linting and formatting setup expert using Biome and markdownlint-cli2. | — |
 
-## Commands (8)
+## Commands (10)
 
 | Command | Description |
 |---------|-------------|
@@ -45,7 +45,9 @@ Development CLI skills, GitHub workflows, and Claude Code hooks - Docker, Vercel
 | `/commit-push-pr` | Commit, push, and open a pull request in one command |
 | `/commit` | Create a git commit following Commitizen convention with validation and push |
 | `/debug` | Detect and fix all project issues - lint, typecheck, tests, build errors |
+| `/dev` | Start the development server for the current project with auto-detection |
 | `/fix-pr-comments` | Fetch all unresolved comments from current PR and fix them automatically |
+| `/gh-switch` | Switch active GitHub account. Usage: /gh-switch <username> |
 | `/issue-worktree` | Create an isolated git worktree from a GitHub issue with automated branch nam... |
 | `/merge-to-main` | Perform manual merge to main branch with automated conflict resolution and PR... |
 | `/run-task` | Execute a task from file path or GitHub issue with full implementation workflow |

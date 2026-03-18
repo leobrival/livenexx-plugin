@@ -18,7 +18,7 @@ Development CLI skills, GitHub workflows, and Claude Code hooks - Docker, Vercel
 | Testing & Quality | playwright-cli, lighthouse-cli |
 | Claude Code Hooks & Utilities | git-workflow, linter-setup |
 
-**Commands (8)**: `/clean-gone`, `/commit-push-pr`, `/commit`, `/debug`, `/fix-pr-comments`, `/issue-worktree`, `/merge-to-main`, `/run-task`
+**Commands (10)**: `/clean-gone`, `/commit-push-pr`, `/commit`, `/debug`, `/dev`, `/fix-pr-comments`, `/gh-switch`, `/issue-worktree`, `/merge-to-main`, `/run-task`
 
 **Scripts**: git-workflow
 
@@ -32,7 +32,7 @@ livenexx-plugin/
 │   └── dev/
         ├── README.md
         ├── skills/           # 8 skills
-        ├── commands/          # 8 commands
+        ├── commands/          # 10 commands
         └── scripts/
 ├── schemas/
 │   └── marketplace.schema.json
@@ -44,7 +44,7 @@ livenexx-plugin/
 ### Add the marketplace
 
 ```bash
-/plugin marketplace add stanbrunet/livenexx-plugin
+/plugin marketplace add leobrival/livenexx-plugin
 ```
 
 ### Install plugins
