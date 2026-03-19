@@ -17,7 +17,7 @@
     "./skills/spec-kit/SKILL.md",
     "./skills/vercel-cli/SKILL.md",
     "./skills/git-workflow/SKILL.md",
-    "./skills/validation/SKILL.md",
+    "./skills/validation/SKILL.md"
   ],
   "author": {
     "name": "Léo Brival",
