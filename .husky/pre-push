@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# Pre-push hook — block direct pushes to main
+
+while read -r local_ref local_oid remote_ref remote_oid; do
+  if echo "$remote_ref" | grep -qE "refs/heads/main$"; then
+    cat <<'MSG'
+
+BLOCKED — direct push to main is not allowed.
+
+Required workflow:
+  git checkout dev
+  git push origin dev
+  gh pr create --base main --head dev --title "..." --body "..."
+
+AI agents: never push to main, never use --no-verify.
+Work on dev, push to dev, create a PR to main.
+
+MSG
+    exit 1
+  fi
+done
