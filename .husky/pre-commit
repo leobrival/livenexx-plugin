@@ -1,36 +1,36 @@
 #!/usr/bin/env bash
-# Pre-commit hook — runs marketplace validation scripts
-# These scripts check README conformity, skill hash integrity, marketplace.json, and skill standards
+set -euo pipefail
 
+# Pre-commit hook — auto-fix + validate marketplace scripts
 MARKETPLACE_ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
 
-echo "[pre-commit] Running marketplace validation..."
+# ── Phase 1: Auto-fix (silent) ────────────────────────────────
+python3 "$MARKETPLACE_ROOT/.claude/scripts/check-readme-conformity.py" --generate > /dev/null 2>&1 || true
+python3 "$MARKETPLACE_ROOT/.claude/scripts/check-marketplace-json.py" --fix > /dev/null 2>&1 || true
+git add -u -- '*.md' '**/marketplace.json' '**/plugin.json' 2>/dev/null || true
+
+# ── Phase 2: Validate (block on failure) ──────────────────────
+echo "[pre-commit] Validating..."
 
 python3 "$MARKETPLACE_ROOT/.claude/scripts/check-readme-conformity.py" --check --quiet || {
-  echo ""
   echo "README conformity check failed."
   echo "Fix: python3 $MARKETPLACE_ROOT/.claude/scripts/check-readme-conformity.py --generate"
   exit 1
 }
 
 python3 "$MARKETPLACE_ROOT/.claude/scripts/check-skill-hashes.py" --quiet || {
-  echo ""
   echo "Skill hash integrity check failed."
-  echo "Fix: synchronize, rename, or deduplicate divergent skills"
   exit 1
 }
 
 python3 "$MARKETPLACE_ROOT/.claude/scripts/check-marketplace-json.py" --check --quiet || {
-  echo ""
-  echo "Marketplace JSON conformity check failed."
+  echo "Marketplace JSON check failed."
   echo "Fix: python3 $MARKETPLACE_ROOT/.claude/scripts/check-marketplace-json.py --fix"
   exit 1
 }
 
 python3 "$MARKETPLACE_ROOT/.claude/scripts/check-skill-standards.py" --check --quiet || {
-  echo ""
-  echo "Skill design standards check failed."
-  echo "Fix: python3 $MARKETPLACE_ROOT/.claude/scripts/check-skill-standards.py --check"
+  echo "Skill standards check failed."
   exit 1
 }
 
