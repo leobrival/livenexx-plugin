@@ -4,6 +4,7 @@ description: Vercel CLI expert for serverless deployment. Use when users need to
 user-invocable: false
 allowed-tools: Bash(vercel:*)
 handoffs: []
+model: haiku
 ---
 
 # Vercel CLI Guide

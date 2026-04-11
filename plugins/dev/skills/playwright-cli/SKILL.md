@@ -4,6 +4,7 @@ description: Playwright CLI expert for E2E testing and browser automation. Use w
 user-invocable: false
 allowed-tools: Bash(npx playwright:*), Bash(bunx playwright:*)
 handoffs: []
+model: haiku
 ---
 
 # Playwright CLI Guide

@@ -4,6 +4,7 @@ description: Docker CLI expert for containerization. Use when users need to buil
 user-invocable: false
 allowed-tools: Bash(docker:*), Bash(docker-compose:*)
 handoffs: []
+model: haiku
 ---
 
 # Docker CLI Guide

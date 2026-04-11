@@ -6,6 +6,7 @@ allowed-tools: Bash(git *), Bash(gh *), Bash(bun *), Bash(npm *), Bash(pnpm *), 
 handoffs:
   - command: /commit
     condition: "When workflow completes successfully"
+effort: high
 ---
 
 # Git Workflow Toolkit

@@ -6,6 +6,7 @@ allowed-tools: Bash(biome:*), Bash(bunx biome:*), Bash(npx biome:*), Bash(markdo
 handoffs:
   - command: /commit
     condition: "When workflow completes successfully"
+model: sonnet
 ---
 
 # Linter Setup Guide

@@ -4,6 +4,7 @@ description: GitHub CLI (gh) expert for repository management. Use when users ne
 user-invocable: false
 allowed-tools: Bash(gh:*)
 handoffs: []
+model: haiku
 ---
 
 # GitHub CLI Guide

@@ -6,6 +6,7 @@ allowed-tools: Bash(lighthouse:*), Bash(npx lighthouse:*)
 handoffs:
   - command: /commit
     condition: "When workflow completes successfully"
+model: haiku
 ---
 
 # Lighthouse CLI Guide

@@ -4,6 +4,7 @@ description: Next.js CLI expert for React development. Use when users need to cr
 user-invocable: false
 allowed-tools: Bash(next:*), Bash(npx next:*), Bash(bunx next:*)
 handoffs: []
+model: haiku
 ---
 
 # Next.js CLI Guide
